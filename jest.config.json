@@ -1,0 +1,31 @@
+{
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+  "moduleNameMapper": {
+    "^Components/(.*)$": "<rootDir>src/ts/components/$1",
+    "^Types/(.*)$": "<rootDir>src/ts/types/$1"
+  },
+  "roots": ["<rootDir>"],
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom",
+    "@testing-library/jest-dom/extend-expect",
+    "@testing-library/user-event"
+  ],
+  "testEnvironment": "./lib/test/EnvironmentFix.ts",
+  "testRegex": "\\.spec\\.tsx?",
+  "transform": {
+    "^.+\\.(ts|tsx|js|jsx)$": "ts-jest"
+  },
+  "coverageThreshold": {
+    "global": {
+      "branches": 85,
+      "functions": 85,
+      "lines": 85,
+      "statements": 85
+    }
+  },
+  "collectCoverageFrom": [
+      "**/src/ts/**/*.ts",
+      "**/src/ts/**/*.tsx"
+    ],
+    "coverageDirectory": "<rootDir>/coverage"
+}
